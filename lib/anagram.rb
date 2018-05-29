@@ -8,13 +8,12 @@ def initialize(word)
 end
 
 def match(words)
-   words.find_all do |x|
-     compare(x)
+   words.find_all do
+     |x| x.chars.to_a.sort == self.chars.to_a.sort
+     return x
    end
  end
+ 
 
-def compare
-   word.chars.to_a.sort == self.chars.to_a.sort
-end
 
 end
