@@ -9,11 +9,11 @@ end
 
 def match(words)
    words.find_all do
-     |x| x.chars.to_a.sort == self.chars.to_a.sort
+     |anagram| anagram.chars.to_a.sort == @word.chars.to_a.sort
      return x
    end
  end
- 
+
 
 
 end
