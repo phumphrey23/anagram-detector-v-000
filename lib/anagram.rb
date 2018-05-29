@@ -8,7 +8,8 @@ def initialize(word)
 end
 
 def match(words)
-   words.find_all do
+  array = []
+   words.map do
      |anagram| anagram.chars.to_a.sort == @word.chars.to_a.sort
      return anagram
    end
